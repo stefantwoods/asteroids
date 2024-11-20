@@ -17,6 +17,9 @@ def main():
             if event.type == pygame.QUIT:
                 return
             
+        # Move the player
+        player1.update(dt)
+
         # Make the entire screen black
         screen.fill((0,0,0))
 
@@ -26,7 +29,7 @@ def main():
         # Update the screen
         pygame.display.flip()
 
-        dt = clock.tick(60)
+        dt = clock.tick(60) / 1000
 
 if __name__ == "__main__":
     main()
